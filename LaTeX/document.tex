@@ -26,6 +26,8 @@
 
 \usepackage{cleveref}
 
+\usepackage[final]{pdfpages}
+
 \renewcommand{\familydefault}{\sfdefault}
 
 
@@ -193,10 +195,10 @@ Collapse CS301 - Bravium Consulting - Vendor Management
 
 \subsection{Resource References}
 
-\begin{Itemize}
+\begin{itemize}
 	\item \url{https://www.sam.gov/portal/SAM/##11}
 	\item \url{https://www.naics.com/naics-drilldown-table/}
-\end{Itemize}
+\end{itemize}
 
 
 
@@ -227,14 +229,14 @@ Organizations lack a streamlined process for managing external vendors, which le
 The application is made in ServiceNow as a plug. The following are the tools being used;
 Framework:
 \begin{itemize}
-	\item ServiceNow
-	\item Angular
+	\item ServiceNow \url{https://braviumdemo1.service-now.com/navpage.do}
+	\item Angular \url{https://medium.baqend.com/angular-2-by-example-e85a09fa6480}
 \end{itemize}
 Language:
 \begin{itemize}
 	\item Java
 	\item Html
-	\item JS
+	\item JS \url{https://javascript.info/}
 \end{itemize}
 IDE:
 \begin{itemize}
@@ -244,44 +246,6 @@ IDE:
 \subsection{User environment}
 
 ServiceNow, the user would enable the plug-in then input all vendor information. Unless needed the user can update the vendor information. Can also import data from other tables. 
-
-\subsection{Design/implementation constraints}
-
-See other Docs
-
-\subsection{Assumptions and dependencies}
-
-See other Docs
-
-
-
-%----------------------------------------------------------------------------------------
-
-%	External
-
-%----------------------------------------------------------------------------------------
-
-
-
-\section{External Interface Requirements} 
-
-\subsection{User interfaces}
-
-\lipsum[10]
-
-\subsection{Hardware interfaces}
-
-\lipsum[10]
-
-\subsection{Software interfaces}
-
-\lipsum[10]
-
-\subsection{Communication protocols and interfaces}
-
-\lipsum[10]
-
-
 
 %----------------------------------------------------------------------------------------
 
@@ -301,23 +265,21 @@ See other Docs
 
 \section{System Features}
 
-\subsection{System feature A}
-
-\lipsum[10]
+\subsection{Vendor Profile}
 
 \subsubsection{Description and priority}
 
-\lipsum[10]
+Vendor Profile houses all the general vendor information. Can be customizable to the owner liking
 
 \subsubsection{Action/result}
 
-\lipsum[10]
+See Work-flow See Work-flow on the next page
+
+\includepdf[pages={-},angle=-90]{../Workflow/Vendor_Profile_Approval/Vendor_Profile_Approval_11_2.pdf}
 
 \subsubsection{ Functional requirements}
 
 \lipsum[10]
-
-
 
 %----------------------------------------------------------------------------------------
 
@@ -329,13 +291,15 @@ See other Docs
 
 \subsection{System feature B}
 
-\subsubsection{Description and priority}
+\subsubsection{Vendor Job Application}
 
-\lipsum[10]
+After the vendor makes a profile now the vendor can apply to jobs from whats is available
 
 \subsubsection{Action/result}
 
-\lipsum[10]
+See Work-flow on the next page
+
+\includepdf[pages={-},angle=-90]{../Workflow/Vendor_Job_Application/Vendor_Job_Application_11_2.pdf}
 
 \subsubsection{ Functional requirements}
 
@@ -376,8 +340,6 @@ See other Docs
 \subsection{User documentation}
 
 \lipsum[10]
-
-
 
 \section{Other Requirements}
 
