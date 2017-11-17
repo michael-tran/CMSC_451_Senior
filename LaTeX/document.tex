@@ -27,10 +27,46 @@
 \usepackage{cleveref}
 
 \usepackage[final]{pdfpages}
-
 \renewcommand{\familydefault}{\sfdefault}
 
+\usepackage{titlesec}
 
+%----------------------------------------------------------------------------------------
+
+%	SUBSUBSUBSECTION
+
+%----------------------------------------------------------------------------------------
+
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+
+\titleformat{\subsubsubsection}
+{\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}%
+	{3.25ex \@plus1ex \@minus.2ex}%
+	{-1em}%
+	{\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}%
+	{3.25ex \@plus1ex \@minus .2ex}%
+	{-1em}%
+	{\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
 
 % Margins
 
@@ -220,9 +256,22 @@ Modernizing Vendor Management Across the Enterprise
 
 Organizations lack a streamlined process for managing external vendors, which leads to duplicative work performed on the vendor side but also within the organizations themselves. Organizations oftentimes manage vendors using disparate systems that lack workflow automation and reporting/analytics to facilitate a more efficient and accurate vendor management process.
 
-\subsection{User classes and characteristics}
+\subsection{User Stories}
 
-\lipsum[10]
+\subsubsection{Vendor Manager User Stories}
+
+\subsubsubsection{TEST}
+test
+	
+\subsubsection{Vendor User Stories}
+
+\subsubsubsection{TEST}
+test
+
+\subsubsection{Businesses User Stories}
+
+\subsubsubsection{TEST}
+test
 
 \subsection{Operating environment}
 
