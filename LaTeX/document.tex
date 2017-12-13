@@ -202,10 +202,7 @@
 
 Internal Documentation for our senior capstone project for VCU Fall 2017. 
 
-\subsection{Document conventions}
 
-This document follows MLA Format. Bold-faced text has been used to emphasize section and sub-section headings.
-Highlighting is to point out words in the glossary and italicized text is used to label and recognize diagrams.
 
 \subsection{Intended Audience}
 
@@ -254,26 +251,101 @@ Modernizing Vendor Management Across the Enterprise
 
 \subsection{Product functions}
 
-Organizations lack a streamlined process for managing external vendors, which leads to duplicative work performed on the vendor side but also within the organizations themselves. Organizations oftentimes manage vendors using disparate systems that lack workflow automation and reporting/analytics to facilitate a more efficient and accurate vendor management process.
+Organizations lack a streamlined process for managing external vendors, which leads to duplicative work performed on the vendor side but also within the organizations themselves. Organizations oftentimes manage vendors using disparate systems that lack work flow automation and reporting/analytics to facilitate a more efficient and accurate vendor management process.\\
+
+There are three aspects for vendor management.
+\begin{enumerate}
+	
+		\item Vendor acquisition: A company or organization needs to have a simple method for vendors to register themselves. The easier the process is, the more willing a vendor will be. There should be a unified form for vendors to complete. The form should envelope all aspects regarding the vendor. The details of the form are included in the data dictionary.
+		\item Job selection: Currently, there is no standard for vendors to apply to job postings. For example, there are a different number of requirements for government vs private contracts such as NAICs codes, company information. 
+		\item Organization: Currently there is no convenient way to organize current and past vendors/contracts. The plugin will include a role based system for each entity involved. (ex: Vendor, Vendor Manager, Business). The vendor manager will organize the entire contract/vendor acquisition process. 
+\end{enumerate}
+
+
+
+\subsection{Business requirements}
+
+The system should work out-of-the-box for a variety of organizations, such as private companies and governmental agencies. 
+A convenient, easy to access tool that makes vendor management/ contract negotiation process streamlined and simple. The tool will include workflow automation, analytics, vendor self-organization, and contract vehicles. 
+
 
 \subsection{User Stories}
 
 \subsubsection{Vendor Manager User Stories}
 
-\subsubsubsection{TEST}
-test
+\begin{enumerate}
+	
+\item	As a Vendor Manager, I want to access ServiceNow, so that I can manage Vendors
+\item	As a Vendor Manager, I want to see all job contracts, so that I can manage Vendors accordingly 
+\item	As a Vendor Manager, I want to see all available Vendors, so that I can contact eligible Vendors about a new job
+\item	As a Vendor Manager, I want to see all employed Vendors, so that I can manage Vendors accordingly
+\item	As a Vendor Manager, I want to view a detail page on each Vendors, so that I can gather more information on the Vendor
+\item	As a Vendor Manager, I want to approve each Vendors, so that I can employ them for job contracts
+\item	As a Vendor Manager, I want to receive notifications from the business, so that I am up to date on current job posting
+\item	As a Vendor Manager, I want to review job postings, so that I can provide feedback to the business
+\item	As a Vendor Manager, I want to review job submissions, so that I can provide feedback to the business
+\item	As a Vendor Manager, I want to review vendors submissions, so that I can investigate the Vendor
+\item	As a Vendor Manager, I want to notify applied Vendors, so that I can provide feedback to the Vendor on the application status
+\item	As a Vendor Manager, I want to notify working Vendors, so that I can gather information on the current status
+\item	As a Vendor Manager, I want to see a log of status update from the Vendor, so that I can see how much of the contract is finished
+\item	As a Vendor Manager, I want to set-up dates, so that I can organize meetings with Vendors
+\item	As a Vendor Manager, I want to view previous contracts, so that I can keep a log of job contracts
+\item	As a Vendor Manager, I want to see contracts tied with Vendors, so that I can recontact each Vendors
+\item	As a Vendor Manager, I want to see a detail page on jobs contracts, so that I can adjust the work schedule to meet the deadline 
+	
+\end{enumerate}
 	
 \subsubsection{Vendor User Stories}
 
-\subsubsubsection{TEST}
-test
+\begin{enumerate}
+\item As a vendor, I would like to be able to access the Vendor management portal through ServiceNow, so that I can access the tool easily. 
+\item As a vendor, I want to create a profile, so that I can save my company’s information and work with a business. (expand upon this)
+\item As a vendor, I want to log in to my profile, so that I can quickly use the tool.
+\item As a vendor, I want to be able to edit my profile, so that if anything changes within my company, it will be reflected in the vendor management tool
+\item As a vendor, I want to be notified of deadlines for updating my vendor information, so that I can have accurate information in the system.
+\item As a vendor, I want to be able to see jobs related to my field, so that I don’t see unnecessary information.
+\item As a vendor, I want to be able to apply to jobs, so that I can start discussing details with the business 
+\item As a vendor, I want to ask questions about a job I am interested in, so that I can better understand the details about the job
+\item As a vendor I want to view messages sent to me over ServiceNow, so that I can respond accordingly to the messages.
+\item As a vendor, I want to view my profile submission status, so that I can track the vendor approval process
+\item As a vendor, I want to be notified of any important notices, so that I can respond accordingly
+\item As a vendor I want to place a bid, so that the Business can view my bid and compare it to other bids
+\item As a vendor, I want to add NAICS codes for my company, so that businesses can view what I am specialized in.
+\item As a vendor I want to add a specialization, so that I can add a trait if it is not listed currently
+\item As a vendor I want to contact the business about a job I am currently on, so that we can have a trackable communication (maybe)
+\item As a vendor I want to view information about the business, so that I can see more details about that business
+\item As a vendor, I want to add my company’s values, so that I can emphasize what my company stands for
+\item As a vendor, I want to filter jobs based on my search results, so that I can narrow down jobs I am interested in.
+\item As a vendor, I want to see a list of past jobs I have worked on, so that I can easily contact those business if I am interested in doing another job for them.
+
+\end{enumerate}
+
 
 \subsubsection{Businesses User Stories}
 
-\subsubsubsection{TEST}
-test
+\begin{enumerate}
+\item	As a business, I want to have a standard job form to fill out, so that I can quickly create new job postings.
+\item	As a business, I want to receive notification when a vendor applies for a job, so that I can review their application.
+\item	As a business, I want to receive notification when a vendor requests more information, so that I can provide the information needed.
+\item	As a business, I want to edit the job posting, so that all potential vendors can view the additional information.
+\item	As a business, I want to see the list of all vendors who applied for a job listing, so that I can get an overview of the downselect process.
+\item	As a business, I want to send and receive SLAs, so that I can have a streamlined job application process.
+\item	As a business, I want to automatically notify a vendor that they are disqualified for the job posting, so that they won’t waste time waiting for responses.
+\item	As a business, I want to set the starting bid/budget, so the vendors have a guideline to work with.
+\item	As a business, I want to see a list of all current bids for a job listing, so that I can have an overview of the bidding process.
+\item	As a business, I want to select a vendor to be awarded the contract, so that they can work with me for the job listing.
+\item	As a business, I want to upload documents attached to the job posting, so that I can provide more information that are not conveyed by the generic job form.
+\item	As a business, I want to create contract vehicles, so that it is easier to work with certain governmental agencies in the future.
+\item	As a business, I want to see the job history for a specific vendor, so that I know whether to work with this vendor in the future.
+\item	As a business, I want to schedule online or in-person meetings with vendors, so that we can better discuss job details.
+\item	As a business, I want to fill out a vendor performance form, so that I can hold vendors accountable.
+\item	As a business, I want to fill out a vendor complaint form, so that I can resolve any outstanding issues.
+	
+\end{enumerate}
 
 \subsection{Operating environment}
+As ServiceNow is built to be an all-in-one business solution, it does not rely on third-party applications. 
+ServiceNow development Is largely based on the built-in GUI based tools such as business rules, client scripts, macros, etc. For more involved tasks, JavaScript is used alongside with Glide Stack, a Web 2.0 development platform written in Java that facilitates development of forms-based workflow applications. The backend database is MySQL.
 
 The application is made in ServiceNow as a plug. The following are the tools being used;
 Framework:
@@ -287,14 +359,22 @@ Language:
 	\item Html
 	\item JS \url{https://javascript.info/}
 \end{itemize}
-IDE:
-\begin{itemize}
-	\item VS2017
-\end{itemize}
+
 
 \subsection{User environment}
 
 ServiceNow, the user would enable the plug-in then input all vendor information. Unless needed the user can update the vendor information. Can also import data from other tables. 
+
+\subsection{Stakeholders}
+\begin{itemize}
+	\item	Vendor: provides goods/services to the Business
+	\item	Vendor Manager: oversees the vendors and their interactions with the Businesses
+	\item	Business: posts jobs and seeks vendors to fulfill contracts  
+	
+\end{itemize}
+
+\subsection{Constraints}
+Must be built in the ServiceNow environment.
 
 %----------------------------------------------------------------------------------------
 
@@ -356,53 +436,8 @@ See Work-flow on the next page
 
 
 
-%----------------------------------------------------------------------------------------
-
-%	Other
-
-%----------------------------------------------------------------------------------------
 
 
-
-\section{Other Nonfunctional Requirements}
-
-\subsection{Performance requirements}
-
-\lipsum[10]
-
-\subsection{Safety requirements}
-
-\lipsum[10]
-
-\subsection{Security requirements}
-
-\lipsum[10]
-
-\subsection{Software quality attributes}
-
-\lipsum[10]
-
-\subsection{Project documentation}
-
-\lipsum[10]
-
-\subsection{User documentation}
-
-\lipsum[10]
-
-\section{Other Requirements}
-
-\begin{appendices}
-
-	\section{Performance requirements}
-
-	\lipsum[10]
-
-	\section{Safety requirements}
-
-	\lipsum[10]
-
-\end{appendices}
 
 
 
