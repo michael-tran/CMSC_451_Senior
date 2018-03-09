@@ -1,0 +1,18 @@
+Questions
+1. Wildcard search for list fields
+	Reference field is singular choice but has wildcard search
+	List fields is multiple choice but only searches from beginning of the string
+	You can use * for wildcard search, but can you do this by default
+	
+2. What fields does the new job posting form need
+
+3. is it possible to add a user-specific variable so that we know who is associated with which vendor
+	Alternatively, can we store the user id within the vendor form and cross check if the user submitted a duplicated form?
+	
+4. Change revenue, # of employees to number instead of choice?
+
+Street industry, revenue, not mandatory
+
+Make Landing page
+
+Register account: f, L name, B name, R name, phone, email, industry
