@@ -390,25 +390,9 @@ Must be built in the ServiceNow environment.
 
 %----------------------------------------------------------------------------------------
 
+\newpage
 
-
-\section{System Features}
-
-\subsection{Vendor Profile}
-
-\subsubsection{Description and priority}
-
-Vendor Profile houses all the general vendor information. Can be customizable to the owner liking
-
-\subsubsection{Action/result}
-
-See Work-flow See Work-flow on the next page
-
-\includepdf[pages={-},angle=-90]{../Workflow/Vendor_Profile_Approval/Vendor_Profile_Approval_11_2.pdf}
-
-\subsubsection{ Functional requirements}
-
-\lipsum[10]
+\includepdf[scale=0.7,angle=-90,pagecommand=\section{Initial Design}\subsection{Vendor Profile Design}]{../Workflow/Vendor_Profile_Approval/Vendor_Profile_Approval_11_2.pdf}
 
 %----------------------------------------------------------------------------------------
 
@@ -416,29 +400,160 @@ See Work-flow See Work-flow on the next page
 
 %----------------------------------------------------------------------------------------
 
+\includepdf[scale=0.75,angle=-90,pagecommand=\subsection{Vendor Job Application Design}]
+{../Workflow/Vendor_Job_Application/Vendor_Job_Application_11_2.pdf}
 
+\newpage
+\section{Implemented System Features}
 
-\subsection{System feature B}
+Note: Many of these systems have an email system which notifies a group of users or certain users
 
-\subsubsection{Vendor Job Application}
+\subsection{Vendor}
 
-After the vendor makes a profile now the vendor can apply to jobs from whats is available
+\subsubsection{Login-in Page}\label{sec:VendorLogin}
 
-\subsubsection{Action/result}
+\subsubsubsection{Description and priority}
 
-See Work-flow on the next page
+Vendors can login using an existing account or register a new one 
 
-\includepdf[pages={-},angle=-90]{../Workflow/Vendor_Job_Application/Vendor_Job_Application_11_2.pdf}
+\subsubsubsection{Action/result}
 
-\subsubsection{ Functional requirements}
+If the Vendor logins in using an existing account they should be greeted with the Vendor index page. Else a vendor can make a new account filling in the required fields. Once filled the vendor can submit the profile and wait for approval from the Vendor Management
 
-\lipsum[10]
+\subsubsubsection{ Functional requirements}
 
+\begin{itemize}
+	\item Pages don't break when redirecting
+	\item When the Vendor submit a new account should be redirected to the Login in page
+	\item When the Vendor is approved should receive an email with the account temporary password and a message of approval 
+\end{itemize}
 
+\subsubsection{Index Page}\label{sec:VendorIndex}
 
+\subsubsubsection{Description and priority}
 
+Vendors can click on several useful links 
 
+\subsubsubsection{Action/result}
 
+The main links should be Posted Jobs (see \vref{sec:VendorJobs}), Past Experience (see \vref{sec:VendorExperience}), Contract Vehicle (see \vref{sec:VendorVehicle}), and Vendor Profile (see \vref{sec:VendorProfile})
 
+\subsubsection{Vendor Jobs Page}\label{sec:VendorJobs}
+
+\subsubsubsection{Description and priority}
+
+Displays all current jobs posted by the Business
+
+\subsubsubsection{Action/result}
+
+A table should be seen and a short description of each job. When clicked on should display more information and way of asking questions (see \vref{sec:VendorQuestion}).  
+
+\subsubsection{Vendor Experience Page}\label{sec:VendorExperience}
+
+\subsubsubsection{Description and priority}
+
+A page that displays a form of past performance for the vendor to fill out  
+
+\subsubsubsection{Action/result}
+
+When the form is filled out a table should update giving feedback to the vendor that the from has been filled 
+
+\subsubsection{Vendor Vehicle Page}\label{sec:VendorVehicle}
+
+\subsubsubsection{Description and priority}
+
+A page that displays a form of past contracts for the vendor to fill out  
+
+\subsubsubsection{Action/result}
+
+Past contracts are displayed for the vendor to select from and the form should auto populate. Once filled the vendor can modify the fields making small changes for the vehicle contract. 
+
+\subsubsection{Vendor Profile Page}\label{sec:VendorProfile}
+
+\subsubsubsection{Description and priority}
+
+Displays the Vendor business and related information
+
+\subsubsubsection{Action/result}
+
+Each field should be editable for the vendor to change. Once changed the field should update using the new information given.
+
+\subsubsection{Vendor Question Page}\label{sec:VendorQuestion}
+
+\subsubsubsection{Description and priority}
+
+Vendors can ask question related to the job posting
+
+\subsubsubsection{Action/result}
+
+The question should auto append the job ID with the submitted question
+
+\subsection{Vendor Manager}
+
+\subsubsection{Vendor Manager Page}\label{sec:Manager}
+
+\subsubsubsection{Description and priority}
+
+The standard ServiceNow backend platform
+
+\subsubsubsection{Action/result}
+
+The Vendor Manager should be able to find the plugin using the left navigation bar called "Vendor Management"
+
+\subsubsection{Vendor Manager Vendor List Page}\label{sec:ManagerVendors}
+
+\subsubsubsection{Description and priority}
+
+After navigating the left navigation bar the Vendor Manager should be able to see a link called "List of Vendors"
+
+\subsubsubsection{Action/result}
+
+The "List of Vendors" is all approved Vendors in the system. The Vendor Manager can add new Vendors if needed but mostly used to view more information on certain vendors. 
+
+\subsubsection{Vendor Manager Job List Page}\label{sec:ManagerJobs}
+
+\subsubsubsection{Description and priority}
+
+After navigating the left navigation bar the Vendor Manager should be able to see a link called "List of Jobs"
+
+\subsubsubsection{Action/result}
+
+The "List of Jobs" is all posted Jobs in the system. The Vendor Manager can add new Jobs if needed and can see related questions to them using the "QA questions" link (see \vref{sec:VendorQuestions})
+
+\subsubsection{Vendor Manager Questions List Page}\label{sec:VendorQuestions}
+
+\subsubsubsection{Description and priority}
+
+After navigating the left navigation bar the Vendor Manager should be able to see a link called "QA Questions"
+
+\subsubsubsection{Action/result}
+
+The "QA Questions" is all posted Questions in the system. Each question has the Job ID appended to the title which is used for reference to that job that is. The question can be answered from this page as well by clicking on the record and filling out the form.
+
+\section{Unimplemented System Features}
+
+\subsection{Vendor}
+
+\subsubsection{Biding}
+
+\subsubsubsection{Description and priority}
+
+The Vendor can click on the job and start placing bids on the contract on how much they are willing to spend on the job
+
+\subsubsubsection{Action/result}
+ 	
+The Vendor click the job and is able to fill a form for a bid stating the amount and terms of agreement
+
+\subsection{Vendor Management}
+
+\subsubsection{Biding}
+
+\subsubsubsection{Description and priority}
+
+The Vendor Manager can click on the job see the amount of bids place and which vendor placed the bid
+
+\subsubsubsection{Action/result}
+
+The Vendor Manager is able to see bids placed on a job and is able to contact the vendor back. If the Vendor manager has found a potential winner all other vendors are notified that they did not get the job.
 
 \end{document}
